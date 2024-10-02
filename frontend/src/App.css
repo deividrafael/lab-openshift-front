@@ -1,38 +1,90 @@
+/* Estilos globais */
+body {
+  background-color: #0a0a23; /* Fundo azul escuro */
+  color: #e6e6ff; /* Texto em tom claro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout da aplicação principal */
 .App {
+  padding-top: 80px; /* Espaço para a barra fixa */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #0000cc; /* Faixa azul */
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.filter-container {
+  display: flex;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"], select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #e6e6ff;
+  background-color: #333366; /* Azul escuro */
+  color: white;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4b0082; /* Roxo */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button#logout {
+  background-color: #cc0000; /* Cor do botão sair */
+  margin-right: 30px;
+
+}
+
+button:hover {
+  background-color: #6a0dad;
+}
+
+h1 {
+  color: #b3b3ff;
+  justify-content: center;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 90%; /* Tabela ocupa dinamicamente 90% da tela */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #e6e6ff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  background-color: #333366; /* Fundo azul escuro nas células */
+}
+
+th {
+  background-color: #4b0082; /* Fundo roxo nas colunas de título */
+  color: white;
 }
