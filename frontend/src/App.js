@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     // Faz a requisição para o backend
-    axios.get('http://localhost:3001/api/data')
+    axios.get('https://lab-openshift-app-deivid-rosariodrr-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/data')
       .then(response => {
         setData(response.data);
       })
