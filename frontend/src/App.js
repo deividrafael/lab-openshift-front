@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
+const API_URL = process.env.REACT_APP_API_URL
+
 function App() {
   const [data, setData] = useState([]);
   const [username, setUsername] = useState('');
@@ -13,10 +15,12 @@ function App() {
   const [searchTerm, setSearchTerm] = useState(''); // Termo de pesquisa
   const [filterCriteria, setFilterCriteria] = useState('tag'); // Critério de filtro
 
+
+
   // Função para fazer login
   const handleLogin = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/api/login', { username, password })
+    axios.post(`${API_URL}/api/login`, { username, password })
       .then(response => {
         setToken(response.data.token);
         localStorage.setItem('token', response.data.token);
@@ -35,7 +39,7 @@ function App() {
       return;
     }
 
-    axios.post('http://localhost:3001/api/register', { username, password })
+    axios.post(`${API_URL}/api/register`, { username, password })
       .then(response => {
         setToken(response.data.token);
         localStorage.setItem('token', response.data.token);
@@ -53,7 +57,7 @@ function App() {
     const storedToken = localStorage.getItem('token');
     if (storedToken) {
       setToken(storedToken);
-      axios.get('http://localhost:3001/api/data', {
+      axios.get(`${API_URL}/api/data`, {
         headers: {
           Authorization: `Bearer ${storedToken}`
         }
