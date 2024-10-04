@@ -88,3 +88,35 @@ th {
   background-color: #4b0082; /* Fundo roxo nas colunas de título */
   color: white;
 }
+
+.chatbot-container {
+  border: 1px solid #3813df;
+  padding: 10px;
+  width: 300px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+}
+
+.chat-window {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.message.user {
+  background-color: #0b0b0b;
+  text-align: right;
+}
+
+.message.bot {
+  background-color: #0d0d0d;
+  text-align: left;
+}

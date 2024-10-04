@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import Chatbot from './Chatbot';
 
 const API_URL = process.env.REACT_APP_API_URL
 
@@ -189,6 +190,8 @@ function App() {
               </tbody>
             </table>
           </div>
+           {/* Componente do chatbot */}
+           <Chatbot />
         </div>
       )}
     </div>
